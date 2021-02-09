@@ -415,7 +415,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Vocabulary-Log/Preview Content\"";
-				DEVELOPMENT_TEAM = M37C3Z2PMR;
+				DEVELOPMENT_TEAM = L27L4K8SQU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Vocabulary-Log/Info.plist";
@@ -440,7 +440,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Vocabulary-Log/Preview Content\"";
-				DEVELOPMENT_TEAM = M37C3Z2PMR;
+				DEVELOPMENT_TEAM = L27L4K8SQU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Vocabulary-Log/Info.plist";
@@ -460,7 +460,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vocabulary-Log-Extension/Vocabulary_Log_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M37C3Z2PMR;
+				DEVELOPMENT_TEAM = L27L4K8SQU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Vocabulary-Log-Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -480,7 +480,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vocabulary-Log-Extension/Vocabulary_Log_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M37C3Z2PMR;
+				DEVELOPMENT_TEAM = L27L4K8SQU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Vocabulary-Log-Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

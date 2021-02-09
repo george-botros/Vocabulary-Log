@@ -11,7 +11,7 @@ import SwiftUI
 struct Vocabulary_LogApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            ContentView(vocabularyLog: try! JSONDecoder().decode([Term].self, from: defaults!.object(forKey: "terms") as! Data))
+        }.windowStyle(HiddenTitleBarWindowStyle())
     }
 }
