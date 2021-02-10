@@ -1,10 +1,3 @@
-//
-//  SafariExtensionHandler.swift
-//  Vocabulary-Log-Extension
-//
-//  Created by George Botros on 2/8/21.
-//
-
 import SafariServices
 
 let defaults = UserDefaults.init(suiteName: "L27L4K8SQU.Vocabulary-Log")!

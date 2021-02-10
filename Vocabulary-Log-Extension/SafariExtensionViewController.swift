@@ -1,10 +1,3 @@
-//
-//  SafariExtensionViewController.swift
-//  Vocabulary-Log-Extension
-//
-//  Created by George Botros on 2/8/21.
-//
-
 import SafariServices
 
 class SafariExtensionViewController: SFSafariExtensionViewController {
