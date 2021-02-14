@@ -18,6 +18,7 @@
 		6E0115D125D1340500B376F1 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0115D025D1340500B376F1 /* ToolbarItemIcon.pdf */; };
 		6E0115D425D1340500B376F1 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E0115D225D1340500B376F1 /* SafariExtensionViewController.xib */; };
 		6E0115D925D1340500B376F1 /* Vocabulary-Log-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E0115C425D1340500B376F1 /* Vocabulary-Log-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CB3EA12625D89616006E835E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3EA12525D89616006E835E /* API.swift */; };
 		CBF95C5125D3FB2E0091402A /* TermItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF95C5025D3FB2E0091402A /* TermItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		6E0115D325D1340500B376F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		6E0115D525D1340500B376F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E0115D625D1340500B376F1 /* Vocabulary_Log_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vocabulary_Log_Extension.entitlements; sourceTree = "<group>"; };
+		CB3EA12525D89616006E835E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		CBF95C5025D3FB2E0091402A /* TermItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				6E0115AF25D133BD00B376F1 /* Vocabulary_LogApp.swift */,
 				6E0115B125D133BD00B376F1 /* ContentView.swift */,
 				CBF95C5025D3FB2E0091402A /* TermItem.swift */,
+				CB3EA12525D89616006E835E /* API.swift */,
 				6E0115B325D133BF00B376F1 /* Assets.xcassets */,
 				6E0115B825D133BF00B376F1 /* Info.plist */,
 				6E0115B925D133BF00B376F1 /* Vocabulary_Log.entitlements */,
@@ -259,6 +262,7 @@
 			files = (
 				CBF95C5125D3FB2E0091402A /* TermItem.swift in Sources */,
 				6E0115B225D133BD00B376F1 /* ContentView.swift in Sources */,
+				CB3EA12625D89616006E835E /* API.swift in Sources */,
 				6E0115B025D133BD00B376F1 /* Vocabulary_LogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

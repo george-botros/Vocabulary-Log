@@ -3,16 +3,26 @@ import CoreServices.DictionaryServices
 
 struct TermItem: View {
     @State var term: String
-    @State var definition: String
+    @State var preferredDefinition: String?
+    @State var definitions: [Definition]?
     var source: String
     var example: String
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 TextField("Term", text: $term)
-                    //.frame(minWidth: 10, idealWidth: 50, maxWidth: 60)
+                    .onChange(of: term, perform: { _ in
+                        Api().define(word: term) { (results) in
+                            definitions = results?.first?.meanings.first?.definitions ?? []
+                        }
+                    })
                     .fixedSize()
-                TextEditor(text: $definition)
+                // TextField("Definition", text: $definition)
+                Picker("Select", selection: self.$preferredDefinition) {
+                    ForEach(definitions ?? [], id: \.definition) { definition in
+                        Text(definition.definition)
+                    }
+                }
             }
             Text("\""+example+"\"")
             HStack {
@@ -24,12 +34,17 @@ struct TermItem: View {
         }
         .background(Color.init("mg"))
         .cornerRadius(8)
+        .onAppear {
+            Api().define(word: term) { (results) in
+                definitions = results?.first?.meanings.first?.definitions ?? []
+            }
+        }
     }
 }
 
 struct TermItem_Previews: PreviewProvider {
     static var previews: some View {
-        TermItem(term: "Percolate", definition: "(of a liquid or gas) filter.", source: "wikipedia.com", example: "You'll meet a girl and find out later / she smells just like a percolator.")
+        TermItem(term: "Percolate", source: "wikipedia.com", example: "You'll meet a girl and find out later / she smells just like a percolator.")
     }
 }
 

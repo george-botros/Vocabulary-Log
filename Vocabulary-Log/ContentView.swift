@@ -28,7 +28,7 @@ struct ContentView: View {
         
         List {
             ForEach(vocabularyLog ?? [], id: \.word) { term in
-                TermItem(term: term.word, definition: "hamsamsa", source: "google.com", example: term.exampleSentence)
+                TermItem(term: term.word, source: "google.com", example: term.exampleSentence)
                 Divider()
             }
         }
