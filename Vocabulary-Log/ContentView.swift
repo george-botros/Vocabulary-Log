@@ -2,21 +2,14 @@ import SwiftUI
 
 let defaults = UserDefaults.init(suiteName: "L27L4K8SQU.Vocabulary-Log")
 
-struct Term: Codable {
-    var word: String
-    var exampleSentence: String
-    var url: String
-}
-
-
 struct ContentView: View {
 
-    @AppStorage("terms", store: defaults) var vocabularyLogAsData = Data()
+    class ContentViewModel: ObservableObject {
+      @Published("terms") var vocabularyLog = Terms()
+    }
+    @StateObject var model = ContentViewModel()
 
     var body: some View {
-
-        let vocabularyLog = try? JSONDecoder().decode([Term].self, from: vocabularyLogAsData)
-
         HStack {
             Text("Vocabulary Log")
                 .font(Font.custom("SF Compact Rounded", size: 33))
@@ -27,14 +20,29 @@ struct ContentView: View {
         }
         
         List {
-            ForEach(vocabularyLog ?? [], id: \.word) { term in
+            ForEach(model.vocabularyLog, id: \.id) { term in
                 TermItem(term: term.word, source: "google.com", example: term.exampleSentence)
                 Divider()
             }
+        }.onAppear {
+            print(model.vocabularyLog)
+            print(model.vocabularyLog.first)
         }
+        // .onDeleteCommand(perform: vocabularyLog?.remove(at: 1))
         .toolbar(content: {
             Spacer()
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                print(model.vocabularyLog)
+                print(model.vocabularyLog.first)
+                /* let encoder = JSONEncoder()
+                model.vocabularyLog.append(Term(word: "word", exampleSentence: "lol", url: "lmfao"))
+                if let appendedDictionary = try? encoder.encode(model.vocabularyLog) {
+                    print("j")
+                    defaults?.set(appendedDictionary, forKey: "terms")
+                } else {
+                    print("failed")
+                } */
+            }, label: {
                 Image(systemName: "plus")
             })
         })

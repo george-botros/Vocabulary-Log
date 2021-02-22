@@ -30,11 +30,8 @@ class Api {
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data, _, error) in
             if let data = data {
-                print("1")
                 if let decodedResponse = try? JSONDecoder().decode([Response].self, from: data) {
-                    print("2")
                     DispatchQueue.main.async {
-                        print(decodedResponse)
                         completion(decodedResponse)
                     }
                     return
